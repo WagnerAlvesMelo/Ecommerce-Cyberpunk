@@ -12,6 +12,7 @@ body{
     background-color: #07070D;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-x: hidden;
 }
 
 
@@ -33,8 +34,9 @@ body::after{
 
 
 header{
-    background-color: rgba(0, 0, 0, 0.15);
-    box-shadow: 0 8px 6px 0px rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.40);
+    box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.40);
+    width: 98.7vw;
 }
 
 
@@ -81,8 +83,8 @@ a{
     font-size: 20px;
     border-radius: 80px;
     padding-left: 10px;
-    border: 1px solid #8A228C;
-   
+    border: 1px solid #07070D;
+    padding: 4px;
 }
 
 
@@ -101,12 +103,11 @@ input:focus{
     background-color: transparent;
     height: 40px;
     position: absolute;
-    margin-right: 4px;
-    margin-top: 1px;
-    top:0;
+    margin-right: 15px;
+    margin-top: 0px;
+    top:4px;
     right: 0;
-    width: 4.1em;
-    background-position-y: -7px;
+    width: 3em;
     border:none;
     cursor: pointer;
 }
@@ -119,8 +120,8 @@ input:focus{
 
 
 #iconeCarrinho{
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
 }
 #iconeCoracao{
     width: 37px;
@@ -192,6 +193,72 @@ nav ul li a{
     text-shadow: -2px 0 #fe3a7f;
     animation: effect 0.6s infinite linear;
 }
+
+
+#container {
+    margin-top: 3%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  
+#slider-wrapper {
+    width: 96vw;
+    height: 80vh;
+    overflow: hidden;
+    display: block;
+  }
+  
+#inner-wrapper {
+    width: 300%;
+    height: 65vh;
+    position: relative;
+    left: -100%;
+    
+  
+}
+  
+.slide {
+    width: calc(100% / 3);
+    height: 100%;
+    float: left;
+    font-size: 100px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.button {
+    width: 30px;
+    height: 30px;
+    border-top: 2px solid white;
+    position: absolute;
+    cursor: pointer;
+    padding: 20px;
+  }
+  
+  
+  .prev {
+    border-left: 2px solid white;
+    transform: rotate(-45deg);
+    top: 28vh;
+    margin-left: 4vw;
+  }
+  
+  .next {
+    border-right: 2px solid white;
+    right: 10%;
+    top: 28vh;
+    margin-right: -5vw;
+    transform: rotate(45deg);
+  }
 
 
 @keyframes effect{
