@@ -1,0 +1,284 @@
+html,body,ul,li,p{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+
+body{
+    background-color: #07070D;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+body::after{
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../images/Wallpaper2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.15;
+}
+
+
+header{
+    background-color: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 6px 0px rgba(0, 0, 0, 0.15);
+}
+
+
+a{
+    text-decoration:none;
+    color: white;
+}
+
+
+#logo{
+    font-size: 40px;
+}
+
+
+#menuDeCima{
+    display: flex;
+    justify-content: space-between; 
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+}
+
+#menuDeCima > #searchBox{
+    margin-left: 30px;
+}
+
+#usuario{
+    display: flex;
+    
+}
+
+
+#searchBox{
+    display: inline-block;
+    position: relative;           
+}
+
+
+#caixaDePesquisa{
+    display: block;
+    width: 40vw;
+    height: 2.2rem;
+    font-size: 20px;
+    border-radius: 80px;
+    padding-left: 10px;
+    border: 1px solid #8A228C;
+   
+}
+
+
+input:focus{
+    outline:none;
+}
+
+#searchBox input{
+    flex-grow: 2;
+}
+
+
+#botaoPesquisa{
+    background-image: url("../images/search.png");
+    background-size: cover;
+    background-color: transparent;
+    height: 40px;
+    position: absolute;
+    margin-right: 4px;
+    margin-top: 1px;
+    top:0;
+    right: 0;
+    width: 4.1em;
+    background-position-y: -7px;
+    border:none;
+    cursor: pointer;
+}
+
+
+#pessoa{
+    width: 48px;
+    height: 48px;
+}
+
+
+#iconeCarrinho{
+    width: 35px;
+    height: 35px;
+}
+#iconeCoracao{
+    width: 37px;
+    height: 35px;
+}
+
+
+
+ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+nav ul li a{
+    display: block;
+    padding: 20px;
+}
+
+
+.menu-item{
+    position: relative;
+    z-index: 2;
+}
+
+
+.menu-item:hover{
+  filter: blur(0.5px);
+}
+
+
+.menu-item::before,
+.menu-item::after{
+    content: attr(data-content);
+    top: 20px;
+    left: 20px;
+    right: 0;
+    z-index: 1;
+    position: absolute;
+    visibility: hidden;
+    overflow: hidden;
+    color: #fff;
+}
+
+.menu-item::before{
+    left: 18px;
+}
+
+
+.menu-item:hover::before,
+.menu-item:hover::after{
+    visibility: visible;
+}
+
+
+
+.menu-item:hover::before{
+    text-shadow: 2px 0 #00ffea;
+    animation: effect 1.2s infinite linear;
+}
+
+
+.menu-item::after{
+    left: 22px;
+}
+
+
+.menu-item:hover::after{
+    text-shadow: -2px 0 #fe3a7f;
+    animation: effect 0.6s infinite linear;
+}
+
+
+@keyframes effect{
+    0%{
+        clip: rect(55px,9999px,56px,0);
+    }
+    5%{
+        clip: rect(47px,9999px,30px,0);
+    }
+    10%{
+        clip: rect(33px,9999px,36px,0);
+    }
+    15%{
+        clip: rect(35px,9999px,9px,0);
+    }
+    20%{
+        clip: rect(63px,9999px,59px,0);
+    }
+    25%{
+        clip: rect(96px,9999px,98px,0);
+    }
+    30%{
+        clip: rect(48px,9999px,77px,0);
+    }
+    35%{
+        clip: rect(50px,9999px,34px,0);
+    }
+    40%{
+        clip: rect(60px,9999px,72px,0);
+    }
+    45%{
+        clip: rect(10px,9999px,81px,0);
+    }
+    50%{
+        clip: rect(2px,9999px,60px,0);
+    }
+    55%{
+        clip: rect(23px,9999px,89px,0);
+    }
+    60%{
+        clip: rect(76px,9999px,91px,0);
+    }
+    65%{
+        clip: rect(62px,9999px,30px,0);
+    }
+    70%{
+        clip: rect(60px,9999px,73px,0);
+    }
+    75%{
+        clip: rect(60px,9999px,87px,0);
+    }
+    80%{
+        clip: rect(2px,9999px,14px,0);
+    }
+    85%{
+        clip: rect(28px,9999px,87px,0);
+    }
+    90%{
+        clip: rect(73px,9999px,50px,0);
+    }
+    95%{
+        clip: rect(79px,9999px,70px,0);
+    }
+    100%{
+        clip: rect(17px,9999px,79px,0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*PLACEHOLDER*/
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: black;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: black;
+  }
