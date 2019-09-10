@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function() {
 
     var inWrap = $('#inner-wrapper');
   
@@ -20,16 +20,27 @@ $(function() {
   
     $('.next').on('click', function() {
   
-      inWrap.animate({left: '-200%'}, 400, function(){
+    passarSlide();
+  
+  
+    });
+
+    function passarSlide(){
+      inWrap.animate({left: '-200%'}, 500, function(){
   
         inWrap.css('left', '-100%');
   
         $('.slide').last().after($('.slide').first());
   
       });
-  
-  
-    });
-  
-  
+    }
+
+    
+    let carrosselRodar =setInterval(() => {
+      passarSlide()
+    }, 4000);
+
+    
+    
+
   });
